@@ -13,7 +13,7 @@ Es probable que encuentres bugs, errores o cosas que simplemente no tienen senti
 
 ## 🚀 Demo en Vivo  
 Puedes explorar la aplicación desplegada en el siguiente enlace:  
-[**Retro Easter Egg Hunt - Demo**]((https://retro-easter-egg.vercel.app/))
+[**Retro Easter Egg Hunt - Demo**](https://retro-easter-egg.vercel.app/)
 
 ---
 
