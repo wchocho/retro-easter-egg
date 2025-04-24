@@ -1,0 +1,39 @@
+.retro-tabs {
+  background-color: #000;
+  border: 1px solid #33ff33;
+}
+
+.retro-tab {
+  color: #33ff33;
+  background-color: transparent;
+  border: none;
+  font-family: "VT323", monospace;
+  font-size: 1rem;
+  padding: 0.5rem 1rem;
+}
+
+.retro-tab[data-state="active"] {
+  background-color: #33ff33;
+  color: #000;
+}
+
+.retro-button-sm {
+  background-color: #000;
+  color: #33ff33;
+  border: 1px solid #33ff33;
+  font-family: "VT323", monospace;
+  font-size: 0.9rem;
+  height: 2.5rem;
+  padding: 0 1rem;
+}
+
+.retro-button-xs {
+  background-color: #000;
+  color: #33ff33;
+  border: 1px solid #33ff33;
+  font-family: "VT323", monospace;
+  font-size: 0.8rem;
+  height: 2rem;
+  padding: 0 0.75rem;
+}
+
