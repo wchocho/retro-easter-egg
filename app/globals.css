@@ -58,6 +58,7 @@
   src: url(https://fonts.gstatic.com/s/vt323/v17/pxiKyp0ihIEF2isfFJU.woff2) format("woff2");
 }
 
+<<<<<<< HEAD
 html,
 body {
   width: 100%;
@@ -71,15 +72,24 @@ body {
   height: 100%;
 }
 
+=======
+>>>>>>> upstream/main
 body {
   font-family: "VT323", monospace;
   font-size: 1.2rem; /* Aumenta este valor para agrandar el texto */
   letter-spacing: 1px;
+<<<<<<< HEAD
   overflow: hidden;
 }
 
 .retro-screen {
   background-color: transparent;
+=======
+}
+
+.retro-screen {
+  background-color: #000;
+>>>>>>> upstream/main
   color: #33ff33;
   position: relative;
   overflow: hidden;
