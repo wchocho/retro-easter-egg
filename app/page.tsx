@@ -9,6 +9,10 @@ import { Label } from "@/components/ui/label"
 import { toast } from "@/components/ui/use-toast"
 import { Toaster } from "@/components/ui/toaster"
 import { Progress } from "@/components/ui/progress"
+<<<<<<< HEAD
+import { useSound } from "@/lib/SoundContext"
+=======
+>>>>>>> upstream/main
 import {
   Terminal,
   Volume2,
@@ -49,6 +53,10 @@ import {
 } from "./components/constants"
 
 export default function Home() {
+<<<<<<< HEAD
+  const { soundEnabled, setSoundEnabled } = useSound();
+=======
+>>>>>>> upstream/main
   const router = useRouter()
   const terminalRef = useRef<HTMLDivElement>(null)
   const gameRef = useRef<HTMLDivElement>(null)
@@ -56,7 +64,10 @@ export default function Home() {
 
   // Estados de la interfaz
   const [theme, setTheme] = useState<"green" | "amber" | "blue">("green")
+<<<<<<< HEAD
+=======
   const [soundEnabled, setSoundEnabled] = useState(false)
+>>>>>>> upstream/main
   const [showSettings, setShowSettings] = useState(false)
   const [showStats, setShowStats] = useState(false)
   const [showProfile, setShowProfile] = useState(false)
@@ -227,6 +238,10 @@ export default function Home() {
 
     const handleKeyPress = () => {
       playSound("click", { enabled: soundEnabled })
+<<<<<<< HEAD
+      playSound("startup", { enabled: soundEnabled })
+=======
+>>>>>>> upstream/main
       setWaitingForKeyPress(false)
       setBootSequence(false)
 
@@ -386,7 +401,11 @@ export default function Home() {
     }
   }, [usedCommands, achievements])
 
+<<<<<<< HEAD
+
+=======
   
+>>>>>>> upstream/main
   // Temporizador para easter egg de tiempo limitado
   useEffect(() => {
     if (!showTimeLimitedEgg) return
@@ -795,7 +814,11 @@ Estadísticas:
 - Easter eggs bonus: ${eggStats.bonus}
 - Logros desbloqueados: ${achievements.filter((a) => a.unlocked).length}/${achievements.length}
     `
+<<<<<<< HEAD
+
+=======
     
+>>>>>>> upstream/main
     } else if (input.startsWith("theme ")) {
       const newTheme = input.substring(6).toLowerCase()
       if (["green", "amber", "blue"].includes(newTheme)) {
@@ -953,8 +976,26 @@ Puntos: ${userPoints}
       <main className={`retro-screen retro-${theme} min-h-screen flex flex-col items-center justify-center p-4`}>
         <div className="scanlines"></div>
         <pre className="retro-terminal w-full max-w-md font-mono text-sm whitespace-pre-wrap">{bootText}</pre>
+<<<<<<< HEAD
+
+        {/* Botón para saltar la animación */}
+        <button
+          onClick={() => {
+            playSound("click", { enabled: soundEnabled })
+            playSound("startup", { enabled: soundEnabled })
+            setWaitingForKeyPress(false)
+            setBootSequence(false)
+          }}
+          className="fixed bottom-9 left-1/2 transform -translate-x-1/2 px-2 py-1 bg-primary text-black rounded hover:bg-primary/80 transition retro-button text-sm"
+        >
+          Omitir
+        </button>
+      </main>
+    );
+=======
       </main>
     )
+>>>>>>> upstream/main
   }
 
   // Renderizado de la pantalla de login
@@ -1023,6 +1064,8 @@ Puntos: ${userPoints}
             <h2 className="text-xl">TERMINAL</h2>
             <div className="flex gap-2">
               <button
+<<<<<<< HEAD
+=======
                 onClick={handleSoundToggle}
                 className="p-1 hover:bg-primary/20 rounded"
                 aria-label={soundEnabled ? "Desactivar sonido" : "Activar sonido"}
@@ -1030,6 +1073,7 @@ Puntos: ${userPoints}
                 {soundEnabled ? <Volume2 size={18} /> : <VolumeX size={18} />}
               </button>
               <button
+>>>>>>> upstream/main
                 onClick={() => {
                   setTerminalMode(false)
                   playSound("click", { enabled: soundEnabled })
@@ -1174,12 +1218,17 @@ Puntos: ${userPoints}
           </div>
         </div>
       )}
+<<<<<<< HEAD
+=======
 
+>>>>>>> upstream/main
       <div className="retro-container max-w-md w-full p-6 relative z-10">
         <div className="absolute top-2 right-2 flex gap-2">
           <TooltipProvider>
             <Tooltip>
               <TooltipTrigger asChild>
+<<<<<<< HEAD
+=======
                 <button
                   onClick={handleSoundToggle}
                   className="p-1 hover:bg-primary/20 rounded"
@@ -1197,6 +1246,7 @@ Puntos: ${userPoints}
           <TooltipProvider>
             <Tooltip>
               <TooltipTrigger asChild>
+>>>>>>> upstream/main
                 <Dialog>
                   <DialogTrigger asChild>
                     <button className="p-1 hover:bg-primary/20 rounded" aria-label="Ayuda">
@@ -1621,6 +1671,8 @@ Puntos: ${userPoints}
                   </button>
                 </div>
               </div>
+<<<<<<< HEAD
+=======
 
               <div className="space-y-1">
                 <Label>SONIDO:</Label>
@@ -1644,6 +1696,7 @@ Puntos: ${userPoints}
                   </button>
                 </div>
               </div>
+>>>>>>> upstream/main
             </div>
           </div>
         )}
@@ -1683,7 +1736,11 @@ Puntos: ${userPoints}
           </div>
         )}
 
+<<<<<<< HEAD
+
+=======
         
+>>>>>>> upstream/main
 
         {showPrize ? (
           <div className="prize-reveal">
